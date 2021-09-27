@@ -6,7 +6,10 @@ class Employee(models.Model):
     last_name = models.CharField(max_length=50)
     gender = models.CharField(max_length=50)
     email = models.CharField(max_length=70, default="")
-    address_pincode = models.CharField(max_length=70, default="")
-    address_state = models.CharField(max_length=50)
-    address_city = models.CharField(max_length=50)
+    pincode = models.CharField(max_length=70, default="")
+    state = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
     department = models.CharField(max_length=50)
+
+def __str__(self):
+    return self.first_name
