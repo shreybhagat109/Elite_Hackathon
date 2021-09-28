@@ -41,26 +41,7 @@
     
     
 
-      <center>
-        <h3>
-          Select duration of Paid-Time Off
-        </h3>
-        <div class="dropdown my-3">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            No. of days
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-            <li><a class="dropdown-item active" href="#">2 days</a></li>
-            <li><a class="dropdown-item" href="#">4 days</a></li>
-            <li><a class="dropdown-item" href="#">7 days</a></li>
-          </ul>
-        </div>
-        <form class="col-sm-10" method='POST'>
-          {% csrf_token %}
-        <button type="button" class="btn btn-success" onclick="myFunction()">Send Request</button>
-      </form>
-      </center>
+     
 
   </div>
 
@@ -116,7 +97,26 @@
       </ul>
     </div>
   </div>
-
+  <center>
+          <h3>
+            Select duration of Paid-Time Off
+          </h3>
+          <div class="dropdown my-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              No. of days
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item active" href="#">2 days</a></li>
+              <li><a class="dropdown-item" href="#">4 days</a></li>
+              <li><a class="dropdown-item" href="#">7 days</a></li>
+            </ul>
+          </div>
+          <form class="col-sm-10" method='POST'>
+            {% csrf_token %}
+          <button type="button" class="btn btn-success" onclick="myFunction()">Send Request</button>
+        </form>
+        </center>
 
   <script>
     function myFunction() {
