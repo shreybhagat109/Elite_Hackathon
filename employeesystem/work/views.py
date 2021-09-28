@@ -2,7 +2,21 @@ from django.shortcuts import render
 from .models import Employee
 from math import ceil
 def home(request):
-    return render(request,'home.html')
+    emp=Employee.objects.all()
+    n=len(emp)
+    slides=n//4 +ceil((n/4)-(n//4))
+    allprods=[]
+    cats=Employee.objects.values('city','id')
+    cat={item['city'] for item in cats}
+    for cat in cat:
+        pro = Employee.objects.filter(city=cat)
+        print(pro)
+        n = len(pro)
+        slides = n // 4 + ceil((n / 4) - (n // 4))
+
+        allprods.append([pro,range(0,slides),slides])
+    context={'allprods':allprods}
+    return render(request,'home.html',context)
 
 def profile(request):
     
